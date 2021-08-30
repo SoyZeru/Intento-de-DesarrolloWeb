@@ -37,3 +37,13 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+.contenedor {
+    max-width: 120rem;
+    width: 95%; /* Se recomienda en porcentajes */
+    margin: 0 auto; /* Para centrarlo */
+}
+
+img {
+    max-width: 100%;
+}
