@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Cafe</title>
+
+    <meta name="description" content="Página web de blog de café">
+    <!-- Prefetch -->
+    <link rel="Prefetch" href="nosotros.html" as="document">
+    
+    <!-- Preload -->
+    <link rel="Preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="Preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    as="font" crossorigin="crossorigin">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="Preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="Preload" href="img/blog1.jpg" as="image">
 </head>
 <body>
     
@@ -40,7 +54,11 @@
             
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="wapo">
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp"> 
+                        <img loading="lazy" src="img/blog1.jpg" alt="wapo">
+                    </picture>
+                    
                 </div>
 
                 <div class="entrada__contenido">
@@ -51,7 +69,7 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="wapo">
+                    <img loading="lazy" src="img/blog2.jpg" alt="wapo">
                 </div>
 
                 <div class="entrada__contenido">
@@ -62,7 +80,7 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="wapo">
+                    <img loading="lazy" src="img/blog3.jpg" alt="wapo">
                 </div>
 
                 <div class="entrada__contenido">
@@ -84,7 +102,7 @@
                     <p class="widget-curso__label">Cupo:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Mas información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más info sobre nuestros cursos</a>
                 </li>
                 <li class="widget-curso">
                     <h4 class="no-margin">4 Recetas Fáciles</h4>
@@ -94,7 +112,7 @@
                     <p class="widget-curso__label">Cupo:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Mas información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más info sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
@@ -117,5 +135,6 @@
         </div>
     </footer>
 
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
